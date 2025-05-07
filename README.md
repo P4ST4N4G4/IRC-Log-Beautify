@@ -7,3 +7,6 @@ Transforms bland IRC chat logs into awesome HTML logs with automatic color assig
 Use: 
 python LogBeautify.py 
 On the folder with all your logs.
+
+Code built with HexChat logs in mind, should work well enough with any other kind of IRC log as long as it follows standard formatting.
+Pensat per a logs de HexChat, hauria de funciónar prou bé amb qualsevol tipus de log mentres segeuixi els estàndards convencionals.
