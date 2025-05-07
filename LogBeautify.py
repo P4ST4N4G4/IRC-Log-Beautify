@@ -8,10 +8,15 @@ def convert_log_to_html(log_path):
     lines = Path(log_path).read_text(encoding="utf-8").splitlines()
     html_lines = ['<html><head><meta charset="UTF-8"><style>body{font-family:monospace;background:#111;color:#eee;padding:1em;} .system{color:#aaa;} .timestamp{color:#888;} .message{color:#dfd;}</style></head><body>']
 
+    month_abbreviations = (
+        "Jan ", "Feb ", "Mar ", "Apr ", "May ", "Jun ",
+        "Jul ", "Aug ", "Sep ", "Oct ", "Nov ", "Dec "
+    )
+
     for line in lines:
         if line.startswith("****"):
             html_lines.append(f'<div class="system">{html.escape(line)}</div>')
-        elif line.startswith("May "):
+        elif line.startswith(month_abbreviations):
             try:
                 timestamp_end = line.index(">")
                 prefix = line[:timestamp_end+1]
