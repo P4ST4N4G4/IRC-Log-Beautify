@@ -35,5 +35,5 @@ def convert_log_to_html(log_path):
     print(f"Converted: {output}")
 
 # Tots els logs de la carpeta
-for file in Path(".").glob("*.log.txt"):
+for file in Path(".").glob("*.log"):
     convert_log_to_html(file)
